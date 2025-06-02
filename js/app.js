@@ -38,7 +38,7 @@ btnPrev.addEventListener("click", function (event) {
         prezzoPreventivo = oreLavoro * 33.60
     }
     console.log(prezzoPreventivo)
-
+    // Se  l'utente inserisce uno dei codici validi applico uno sconto del 25% altrimenti lo avviso che il codice non è valido e il prezzo sarà intero
     const codiciValidi = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
 
     if (codicePromo === "") {
@@ -49,5 +49,6 @@ btnPrev.addEventListener("click", function (event) {
         alert("Codice promozionale non valido.")
     }
 
+    // Modifico il div inizialmente vuoto con il prezzo del preventivo
     divRisultato.innerHTML = `&euro; ${prezzoPreventivo.toFixed(2)}`
 })
