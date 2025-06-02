@@ -39,11 +39,15 @@ btnPrev.addEventListener("click", function (event) {
     }
     console.log(prezzoPreventivo)
 
-    if (codicePromo === "YHDNU32") {
-        prezzoPreventivo = prezzoPreventivo * 0.25
+    const codiciValidi = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
+
+    if (codicePromo === "") {
+
+    } else if (codiciValidi.includes(codicePromo)) {
+        prezzoPreventivo = prezzoPreventivo * 0.75
     } else {
         alert("Codice promozionale non valido.")
     }
 
-    divRisultato.innerHTML = `${prezzoPreventivo.toFixed(2)}`
+    divRisultato.innerHTML = `&euro; ${prezzoPreventivo.toFixed(2)}`
 })
