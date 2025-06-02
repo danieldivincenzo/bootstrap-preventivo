@@ -64,7 +64,7 @@
 
                             <div class="col-12">
                                 <label for="inputLavoro" class="form-label">Tipo di lavoro</label>
-                                <select id="inputLavoro" class="form-select">
+                                <select id="selectLavoro" class="form-select">
                                     <option selected>Seleziona il tipo di lavoro</option>
                                     <option>Sviluppo backend</option>
                                     <option>Sviluppo frontend</option>
@@ -92,12 +92,12 @@
                             </div>
 
                             <div class="col-md-6 text-center">
-                                <button type="submit" class="btn btn-primary">Calcola preventivo</button>
+                                <button id="btnPrev" type="submit" class="btn btn-primary">Calcola preventivo</button>
                             </div>
 
                             <div class="col-md-6 text-center mb-4">
                                 <h4>Prezzo finale</h4>
-                                <div>--</div>
+                                <div id="divRisultato">--</div>
                             </div>
 
                         </form>
