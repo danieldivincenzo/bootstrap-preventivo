@@ -49,26 +49,26 @@
                         <form class="row g-3">
                             <div class="col-12">
                                 <label for="inputNome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="inputNome">
+                                <input type="text" class="form-control" id="Nome">
                             </div>
 
                             <div class="col-12">
                                 <label for="inputCognome" class="form-label">Cognome</label>
-                                <input type="text" class="form-control" id="inputCognome">
+                                <input type="text" class="form-control" id="Cognome">
                             </div>
 
                             <div class="col-12">
                                 <label for="inputEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="inputEmail">
+                                <input type="email" class="form-control" id="Email">
                             </div>
 
                             <div class="col-12">
                                 <label for="inputLavoro" class="form-label">Tipo di lavoro</label>
-                                <select id="selectLavoro" class="form-select">
+                                <select id="Lavoro" class="form-select">
                                     <option selected>Seleziona il tipo di lavoro</option>
-                                    <option>Sviluppo backend</option>
-                                    <option>Sviluppo frontend</option>
-                                    <option>Analisi progettuale</option>
+                                    <option value="backend">Sviluppo backend</option>
+                                    <option value="frontend">Sviluppo frontend</option>
+                                    <option value="analisi">Analisi progettuale</option>
                                 </select>
                             </div>
 
@@ -79,7 +79,7 @@
 
                             <div class="col-12">
                                 <label for="inputPromo" class="form-label">Codice Promozionale (opzionale)</label>
-                                <input type="text" class="form-control" id="inputPromo">
+                                <input type="text" class="form-control" id="Promo">
                             </div>
 
                             <div class="col-12">
@@ -92,12 +92,13 @@
                             </div>
 
                             <div class="col-md-6 text-center">
-                                <button id="btnPrev" type="submit" class="btn btn-primary">Calcola preventivo</button>
+                                <button id="calcoloPrev" type="submit" class="btn btn-primary">Calcola
+                                    preventivo</button>
                             </div>
 
                             <div class="col-md-6 text-center mb-4">
                                 <h4>Prezzo finale</h4>
-                                <div id="divRisultato">--</div>
+                                <div id="Risultato">--</div>
                             </div>
 
                         </form>
