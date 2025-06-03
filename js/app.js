@@ -11,9 +11,10 @@ console.log(inputNome, inputCognome, inputEmail, selectLavoro, inputTextarea, in
 const btnPrev = document.getElementById("calcoloPrev")
 console.log(btnPrev)
 
-// Recupero il div dove andrà il prezzo formattato del preventivo
-const divRisultato = document.getElementById("Risultato")
-console.log(divRisultato)
+// Recupero i tag dove andrà il prezzo formattato del preventivo
+const risultatoInt = document.getElementById("Parte-intera")
+const risultatoDec = document.getElementById("Parte-decimale")
+console.log(risultatoInt, risultatoDec)
 
 const oreLavoro = 10  // Ore di lavoro di default come da consegna
 
@@ -38,6 +39,7 @@ btnPrev.addEventListener("click", function (event) {
         prezzoPreventivo = oreLavoro * 33.60
     }
     console.log(prezzoPreventivo)
+
     // Se  l'utente inserisce uno dei codici validi applico uno sconto del 25% altrimenti lo avviso che il codice non è valido e il prezzo sarà intero
     const codiciValidi = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
 
@@ -49,6 +51,12 @@ btnPrev.addEventListener("click", function (event) {
         alert("Codice promozionale non valido.")
     }
 
-    // Modifico il div inizialmente vuoto con il prezzo del preventivo
-    divRisultato.innerHTML = `&euro; ${prezzoPreventivo.toFixed(2)}`
+    // Splitto il prezzo del preventivo per formattarlo in 2 modi diversi
+    const prezzoSplit = prezzoPreventivo.toFixed(2).split(".")
+    console.log(prezzoSplit)
+
+    // Prendo i 2 spazi  inizialmente vuoti e ci stampo le due parti del prezzo formattato
+    risultatoInt.innerHTML = `&euro; ${prezzoSplit[0]}`
+    risultatoDec.innerHTML = `,${prezzoSplit[1]}`
+
 })
